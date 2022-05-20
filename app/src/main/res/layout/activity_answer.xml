@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AnswerActivity2">
+    tools:context=".AnswerActivity">
 
     <TextView
-        android:id="@+id/ans2"
+        android:id="@+id/ans1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

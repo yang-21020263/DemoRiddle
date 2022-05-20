@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class AnswerActivity1 extends AppCompatActivity {
+public class AnswerActivity extends AppCompatActivity {
 
     //
     TextView tvAnswer;
@@ -17,7 +15,7 @@ public class AnswerActivity1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answer1);
+        setContentView(R.layout.activity_answer);
         Log.d("AnswerActivity1", "onCreate() called.");
         //
         tvAnswer = findViewById(R.id.ans1);
@@ -25,7 +23,12 @@ public class AnswerActivity1 extends AppCompatActivity {
 
         Intent intentReceived = getIntent();
         String questionsSelected = intentReceived.getStringExtra("Question");
-        tvAnswer.setText(questionsSelected + " answer is: Queue");
+        if (questionsSelected.equalsIgnoreCase("Q1")) {
+            tvAnswer.setText(questionsSelected + " answer is: Queue");
+        } else if (questionsSelected.equalsIgnoreCase("Q2")) {
+            tvAnswer.setText(questionsSelected + " answer is: Gone");
+        }
+
 
     }
     @Override
